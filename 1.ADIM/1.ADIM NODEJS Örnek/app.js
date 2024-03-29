@@ -30,7 +30,7 @@ var email = 'XXXXXXXX'; // Müşterinizin sitenizde kayıtlı veya form vasıtas
 var payment_amount = 100; // Tahsil edilecek tutar. 9.99 için 9.99 * 100 = 999 gönderilmelidir.
 
 // Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-// (https://coinpays.io/shared/currencies) adresini ziyaret edin
+// (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
 var currency = 'TL';//USD-EUR-TRY-GBP-RUB-CNY-KRW
 
 var test_mode = '0'; // Mağaza canlı modda iken test işlem yapmak için 1 olarak gönderilebilir.
@@ -43,7 +43,7 @@ var user_phone = '05555555555'; // Müşterinizin sitenizde kayıtlı veya form 
 var merchant_pending_url = 'http://www.siteniz.com/odeme_basarili.php';
 
 //Burada ödeme sayfanızın hangi dilde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-//(https://coinpays.io/shared/languages) adresini ziyaret edin
+//(https://app.coinpays.io/shared/languages) adresini ziyaret edin
 var lang = 'tr'; //tr-en-de-fr-es-kr-jp-ar-ru-cn-id-ua
 
 
