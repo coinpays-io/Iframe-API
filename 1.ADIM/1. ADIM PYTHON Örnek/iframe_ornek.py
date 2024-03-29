@@ -55,7 +55,7 @@ user_basket = base64.b64encode(json.dumps([['Örnek ürün 1', '18.00', 1],
 user_ip = ''
 
 # Burada ödeme sayfanızın hangi dilde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-# (https://coinpays.io/shared/languages) adresini ziyaret edin
+# (https://app.coinpays.io/shared/languages) adresini ziyaret edin
 lang = "tr"; //tr-en-de-fr-es-kr-jp-ar-ru-cn-id-ua
 
 
@@ -63,7 +63,7 @@ lang = "tr"; //tr-en-de-fr-es-kr-jp-ar-ru-cn-id-ua
 test_mode = '1'
 
 # Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-# (https://coinpays.io/shared/currencies) adresini ziyaret edin
+# (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
 currency = 'TL'//USD-EUR-TRY-GBP-RUB-CNY-KRW
 
 # Bu kısımda herhangi bir değişiklik yapmanıza gerek yoktur.
