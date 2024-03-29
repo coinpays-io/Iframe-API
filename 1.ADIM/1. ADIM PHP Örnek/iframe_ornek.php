@@ -78,11 +78,11 @@
     $test_mode = 0;
 
 	## Burada ödeme sayfanızın hangi dilde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-	## (https://coinpays.io/shared/languages) adresini ziyaret edin
+	## (https://app.coinpays.io/shared/languages) adresini ziyaret edin
     $lang=  "tr"; //tr-en-de-fr-es-kr-jp-ar-ru-cn-id-ua
 
 	## Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-	## (https://coinpays.io/shared/currencies) adresini ziyaret edin
+	## (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
 	$currency = "TL";//USD-EUR-TRY-GBP-RUB-CNY-KRW
 	
 	####### Bu kısımda herhangi bir değişiklik yapmanıza gerek yoktur. #######
