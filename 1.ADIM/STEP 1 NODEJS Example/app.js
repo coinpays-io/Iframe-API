@@ -9,7 +9,6 @@ var path = require('path');
 
 
 app.set('views', path.join(__dirname, '/app_server/views'));
-
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(express.json());
@@ -19,34 +18,32 @@ var merchant_id = 'XXXXXX';
 var merchant_key = 'YYYYYYYYYYYYYY';
 var merchant_salt = 'ZZZZZZZZZZZZZZ';
 var basket = JSON.stringify([
-    ['Örnek Ürün 1', '18.00', 1],
-    ['Örnek Ürün 2', '33.25', 2],
-    ['Örnek Ürün 3', '45.42', 1]
+    ['Example Product 1', '18.00', 1],
+    ['Example Product 2', '33.25', 2],
+    ['Example Product 3', '45.42', 1]
 ]);
 var user_basket = nodeBase64.encode(basket);
-var merchant_oid = "IN" + microtime.now(); // Sipariş numarası: Her işlemde benzersiz olmalıdır!! Bu bilgi bildirim sayfanıza yapılacak bildirimde geri gönderilir.
+var merchant_oid = "IN" + microtime.now(); // Order number: Must be unique for every transaction!! This information is sent back in the notification to your notification page.
 var user_ip = '';
-var email = 'XXXXXXXX'; // Müşterinizin sitenizde kayıtlı veya form vasıtasıyla aldığınız eposta adresi.
-var payment_amount = 100; // Tahsil edilecek tutar. 9.99 için 9.99 * 100 = 999 gönderilmelidir.
+var email = 'XXXXXXXX'; // Your customer's email address registered on your site or received via the form.
+var payment_amount = 100; // Amount to be collected. For 9.99, 9.99 * 100 = 999 should be sent.
 
-// Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-// (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
+// Here you can choose in which currency you would like to display your cart. Below are sample values. To access the last updated values
+// Visit (https://app.coinpays.io/shared/currencies)
 var currency = 'TRY';//USD-EUR-TRY-GBP-RUB-CNY-KRW
 
-var test_mode = '0'; // Mağaza canlı modda iken test işlem yapmak için 1 olarak gönderilebilir.
-var user_name = ''; // Müşterinizin sitenizde kayıtlı veya form aracılığıyla aldığınız ad ve soyad bilgisi
-var user_address = ''; // Müşterinizin sitenizde kayıtlı veya form aracılığıyla aldığınız adres bilgisi
-var user_phone = '05555555555'; // Müşterinizin sitenizde kayıtlı veya form aracılığıyla aldığınız telefon bilgisi
+var test_mode = '0'; // It can be sent as 1 for testing when the store is in live mode.
+var user_name = ''; // Your customer's name and surname information registered on your site or obtained through the form
+var user_address = ''; // Your customer's address information registered on your site or received through the form
+var user_phone = '05555555555'; // Your customer's phone number registered on your site or received via the form
 
-// Ödeme bekleniyor sayfası sonrası müşterinizin yönlendirileceği sayfa
-// Bu sayfa siparişi onaylayacağınız sayfa değildir! Yalnızca müşterinizi bilgilendireceğiniz sayfadır!
+// The page your customer will be directed to after the payment waiting page
+// This page is not the page where you will confirm the order! This is the page where you will only inform your customer!
 var merchant_pending_url = 'http://www.siteniz.com/odeme_basarili.php';
 
-//Burada ödeme sayfanızın hangi dilde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
-//(https://app.coinpays.io/shared/languages) adresini ziyaret edin
+//Here you can choose which language you would like to display your payment page in. Below are sample values. To access the last updated values
+//Visit (https://app.coinpays.io/shared/languages)
 var lang = 'tr'; //tr-en-de-fr-es-kr-jp-ar-ru-cn-id-ua
-
-
 
 app.get("/", function (req, res) {
 
