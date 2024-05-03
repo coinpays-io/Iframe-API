@@ -31,7 +31,7 @@ var payment_amount = 100; // Tahsil edilecek tutar. 9.99 için 9.99 * 100 = 999 
 
 // Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
 // (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
-var currency = 'TL';//USD-EUR-TRY-GBP-RUB-CNY-KRW
+var currency = 'TRY';//USD-EUR-TRY-GBP-RUB-CNY-KRW
 
 var test_mode = '0'; // Mağaza canlı modda iken test işlem yapmak için 1 olarak gönderilebilir.
 var user_name = ''; // Müşterinizin sitenizde kayıtlı veya form aracılığıyla aldığınız ad ve soyad bilgisi

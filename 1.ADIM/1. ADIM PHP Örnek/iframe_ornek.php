@@ -83,7 +83,7 @@
 
 	## Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
 	## (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
-	$currency = "TL";//USD-EUR-TRY-GBP-RUB-CNY-KRW
+	$currency = "TRY";//USD-EUR-TRY-GBP-RUB-CNY-KRW
 	
 	####### Bu kısımda herhangi bir değişiklik yapmanıza gerek yoktur. #######
 	$hash_str = $merchant_id .$user_ip .$merchant_oid .$email .$payment_amount .$user_basket;

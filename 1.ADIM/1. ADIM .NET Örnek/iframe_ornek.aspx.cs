@@ -73,7 +73,7 @@ namespace WebApplication3
         //
  	    // Burada sepetinizin hangi para biriminde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
 	    // (https://app.coinpays.io/shared/currencies) adresini ziyaret edin
-        string currency = "TL";
+        string currency = "TRY";
         //
         // Burada ödeme sayfanızın hangi dilde görüntülemek istediğinizi seçebilirsiniz. Aşağıda örnek değerler mevcut. Son güncel değerlere erişmek için
 	    // (https://app.coinpays.io/shared/languages) adresini ziyaret edin
